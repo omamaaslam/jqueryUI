@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- <label for="text">Enter name</label>
+    <input type="text" placeholder="autocomplete" title="Enter Name (** Required field)" id="text"> -->
+
+    <div id="dialogue" title="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, eos!
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="jquery/jquery.min.js"></script>
+    <script src="jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // var arr = ["Omama", "Ali", "usama", "Zeeshan", "Faizan", "Khalil", "Zohaib", "Nasir", "Bahadur", "Vinod", "Thapa", "Harry"];
+            // $("#text").autocomplete({source: arr}, {});
+            // $("#text").tooltip({
+            //     // track: true,
+            //     show: {slide: "explode", delay: 1000, duration: 2000},
+            //     hide: {slide: "explode", delay: 500, duration: 2000}
+            // });
+
+            $("#dialogue").dialog({
+                title: "This is jQuery UI dialog",
+                draggable: false,
+                resizable: false,
+                closeOnEscape: false
+            })
+
+        });
+    </script>
+</body>
+
+</html>
