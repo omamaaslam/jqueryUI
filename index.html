@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <button id="alert">sweet alert</button>
     <!-- <label for="text">Enter name</label>
     <input type="text" placeholder="autocomplete" title="Enter Name (** Required field)" id="text"> -->
 
@@ -43,7 +44,7 @@
     <input type="button" value="click" id="btn"> -->
 
 
-    <div id="accordion">
+    <!-- <div id="accordion">
         <h3>This is 1st accordion</h3>
         <div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, nemo vel a reprehenderit eum
@@ -81,9 +82,10 @@
                 et.
                 Iusto maiores consectetur quibusdam delectus quidem.</p>
         </div>
-    </div>
+    </div> -->
 
-
+    <!-- <label for="date">Pick a Date: </label><input type="text" id="date"> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="jquery/jquery.min.js"></script>
     <script src="jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.min.js"></script>
     <script>
@@ -114,12 +116,33 @@
             //     alert(value);
             // })
 
-            $("#accordion").accordion({
-                active: 2,
-                animate: 240,
-                collapsible: true,
-                icons: { header: "ui-icon-plus", activeHeader: "ui-icon-minus" }
-            });
+            // $("#accordion").accordion({
+            //     active: 0,
+            //     animate: 240,
+            //     collapsible: true,
+            //     icons: { header: "ui-icon-plus", activeHeader: "ui-icon-minus" }
+            // });
+
+            // $("#date").datepicker({
+            //     showOn: "both",
+            //     buttonText: "Calender",
+            //     dateFormat: "dd-mm-yy",
+            //     showWeek: true,
+            //     changeMonth: true,
+            //     changeYear: true
+            // });
+
+            $("#alert").click(() => {
+                Swal.fire({
+                    title: "The Internet?",
+                    text: "That thing is still around?",
+                    icon: "question",
+                    timer: 3000,
+                    footer: "This is alert footer",
+                    background: "white",
+                    // timerProgressBar: true
+                });
+            })
 
         });
     </script>
