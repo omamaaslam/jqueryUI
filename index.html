@@ -14,15 +14,33 @@
     <!-- <label for="text">Enter name</label>
     <input type="text" placeholder="autocomplete" title="Enter Name (** Required field)" id="text"> -->
 
-    <div id="dialogue" title="">
+    <!-- <div id="dialogue" title="">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, eos!
-    </div>
+    </div> -->
 
 
+    <!-- <select id="list">
+        <option value="pakistan">pakistan</option>
+        <option value="india">india</option>
+        <option value="sirilanka">sirilanka</option>
+        <option value="bangladesh">bangladesh</option>
+    </select> -->
+
+    <select id="list">
+        <optgroup label="Pakistan">
+            <option value="karachi">Karachi</option>
+            <option value="lahore">Lahore</option>
+            <option value="islamabad">Islamabad</option>
+        </optgroup>
+        <optgroup label="India">
+            <option value="mumbai">Mumbai</option>
+            <option value="delhi">Delhi</option>
+            <option value="goa">Goa</option>
+        </optgroup>
+    </select>
 
 
-
-
+    <input type="button" value="click" id="btn">
 
 
 
@@ -40,11 +58,22 @@
             //     hide: {slide: "explode", delay: 500, duration: 2000}
             // });
 
-            $("#dialogue").dialog({
-                title: "This is jQuery UI dialog",
-                draggable: false,
-                resizable: false,
-                closeOnEscape: false
+            // $("#dialogue").dialog({
+            //     title: "This is jQuery UI dialog",
+            //     draggable: false,
+            //     resizable: false,
+            //     closeOnEscape: false
+            // })
+
+            $("#list").selectmenu({
+                width: "570px",
+                // disabled: true
+                icons: { button: " ui-icon-arrow-1-s" }
+            });
+
+            $("#btn").click(() => {
+                let value = $("#list").val();
+                alert(value);
             })
 
         });
