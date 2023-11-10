@@ -26,7 +26,7 @@
         <option value="bangladesh">bangladesh</option>
     </select> -->
 
-    <select id="list">
+    <!-- <select id="list">
         <optgroup label="Pakistan">
             <option value="karachi">Karachi</option>
             <option value="lahore">Lahore</option>
@@ -40,10 +40,48 @@
     </select>
 
 
-    <input type="button" value="click" id="btn">
+    <input type="button" value="click" id="btn"> -->
 
 
+    <div id="accordion">
+        <h3>This is 1st accordion</h3>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, nemo vel a reprehenderit eum
+                repellat!
+                At
+                sequi dolores voluptatem excepturi delectus temporibus? Rem molestiae modi numquam animi, exercitationem
+                et.
+                Iusto maiores consectetur quibusdam delectus quidem.</p>
+        </div>
+        <h3>This is 2nd accordion</h3>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, nemo vel a reprehenderit eum
+                repellat!
+                At
+                sequi dolores voluptatem excepturi delectus temporibus? Rem molestiae modi numquam animi, exercitationem
+                et.
+                Iusto maiores consectetur quibusdam delectus quidem.</p>
+        </div>
 
+        <h3>This is 3rd accordion</h3>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, nemo vel a reprehenderit eum
+                repellat!
+                At
+                sequi dolores voluptatem excepturi delectus temporibus? Rem molestiae modi numquam animi, exercitationem
+                et.
+                Iusto maiores consectetur quibusdam delectus quidem.</p>
+        </div>
+        <h3>This is 4th accordion</h3>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, nemo vel a reprehenderit eum
+                repellat!
+                At
+                sequi dolores voluptatem excepturi delectus temporibus? Rem molestiae modi numquam animi, exercitationem
+                et.
+                Iusto maiores consectetur quibusdam delectus quidem.</p>
+        </div>
+    </div>
 
 
     <script src="jquery/jquery.min.js"></script>
@@ -65,16 +103,23 @@
             //     closeOnEscape: false
             // })
 
-            $("#list").selectmenu({
-                width: "570px",
-                // disabled: true
-                icons: { button: " ui-icon-arrow-1-s" }
-            });
+            // $("#list").selectmenu({
+            //     width: "570px",
+            //     // disabled: true
+            //     icons: { button: " ui-icon-arrow-1-s" }
+            // });
 
-            $("#btn").click(() => {
-                let value = $("#list").val();
-                alert(value);
-            })
+            // $("#btn").click(() => {
+            //     let value = $("#list").val();
+            //     alert(value);
+            // })
+
+            $("#accordion").accordion({
+                active: 2,
+                animate: 240,
+                collapsible: true,
+                icons: { header: "ui-icon-plus", activeHeader: "ui-icon-minus" }
+            });
 
         });
     </script>
